@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago - GYM Arnolt Classic</title>
+    <link rel="stylesheet" href="../css/pago1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="payment-page">
+        <a href="../html/paginaprincipal.html" class="back">
+            ← Volver al gimnasio
+        </a>
+        <div class="payment-card">
+            <p class="payment-label">
+                GYM ARNOLT CLASSIC
+            </p>
+            <h1 id="plan-name">
+                PLAN BASICO
+            </h1>
+            <p class="price" id="plan-price">
+                Bs 240
+            </p>
+            <p class="instruction">
+                Escanea el código QR con Yape para realizar tu pago.
+            </p>
+            <div class="qr-container">
+                <!-- PON AQUÍ TU QR DE YAPE -->
+                <img src="../img/pagos/basica.jpeg" alt="QR de Yape" class="qr">
+            </div>
+            <p class="yape-text">
+                📱 Paga mediante Yape
+            </p>
+            <p class="amount-text" id="amount-text">
+                Monto a pagar: Bs 240
+            </p>
+            <div class="warning">
+                Después de realizar el pago, guarda tu comprobante.
+            </div>
+            <button class="paid-button" onclick="confirmPayment()">
+                Ya realicé el pago
+            </button>
+            <p id="confirmation" class="confirmation"></p>
+        </div>
+    </main>
+    <script src="../js/pago.js"></script>
+</body>
+</html>
