@@ -13,19 +13,15 @@ app.use(express.json());
 // ===============================
 
 const conexion = mysql.createConnection({
-
-    host: "localhost",
-
-    user: "root",
-
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
-
-    database: "gym_arnolt",
-
-    port: 3306
-
+    database: process.env.DB_NAME,
+    port: process.env.DB_PORT,
+    ssl: {
+        rejectUnauthorized: true
+    }
 });
-
 conexion.connect(function(error) {
 
     if (error) {
