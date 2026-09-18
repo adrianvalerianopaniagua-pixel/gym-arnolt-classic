@@ -413,7 +413,7 @@ function cerrarQR() {
 // ===============================
 
 function cargarProductosTienda() {
-    /*cambiar esto si quieres verlo por live server osea de aqui no de la pagina a estefetch("http://localhost:3000/productos")*/
+    /*cambiar esto si quieres verlo por live server osea de aqui no de la pagina a este fetch("http://localhost:3000/productos")*/
     fetch("/productos")
 
         .then(function(respuesta) {
