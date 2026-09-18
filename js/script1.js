@@ -393,7 +393,7 @@ function cerrarQR() {
 
 function cargarProductosTienda() {
 
-    fetch("http://localhost:3000/productos")
+    fetch("/productos")
 
         .then(function(respuesta) {
 
