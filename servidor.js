@@ -35,7 +35,7 @@ conexion.connect(function(error) {
 // PÁGINA PRINCIPAL
 // ===============================
 app.get("/", function(req, res) {
-    res.send("Servidor GYM ARNOLT CLASSIC funcionando correctamente.");
+    res.sendFile(__dirname + "/html/paginaprincipal.html");
 });
 // 
 // PRUEBA MYSQL
