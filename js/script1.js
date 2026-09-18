@@ -209,10 +209,21 @@ function finalizarCompra() {
         return;
     }
 
-    const nombreCliente = prompt("Ingresa tu nombre:");
+    document.getElementById("ventana-nombre")
+        .classList.add("activa");
+
+    setTimeout(function() {
+        document.getElementById("nombre-cliente").focus();
+    }, 100);
+}
+function continuarConPago() {
+
+    const nombreCliente =
+        document.getElementById("nombre-cliente").value.trim();
 
     if (!nombreCliente) {
         alert("Debes ingresar tu nombre.");
+        document.getElementById("nombre-cliente").focus();
         return;
     }
 
@@ -239,7 +250,12 @@ function finalizarCompra() {
         }
 
         console.log("Pedido guardado:", datos);
+
         window.idPedidoActual = datos.id_pedido;
+
+        document.getElementById("ventana-nombre")
+            .classList.remove("activa");
+
         document.getElementById("qr-total").textContent =
             "Bs " + total;
 
@@ -281,6 +297,11 @@ function finalizarCompra() {
         alert("No se pudo conectar con el servidor.");
 
     });
+}
+function cerrarNombre() {
+
+    document.getElementById("ventana-nombre")
+        .classList.remove("activa");
 }
 /* VERIFICAR PAGO */
 
@@ -392,7 +413,7 @@ function cerrarQR() {
 // ===============================
 
 function cargarProductosTienda() {
-
+    /*cambiar esto si quieres verlo por live server osea de aqui no de la pagina a estefetch("http://localhost:3000/productos")*/
     fetch("/productos")
 
         .then(function(respuesta) {

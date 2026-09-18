@@ -299,6 +299,29 @@
                         </button>
                     </div>
                 </div>
+                <!-- VENTANA PARA INGRESAR NOMBRE -->
+                <div id="ventana-nombre" class="ventana-qr">
+                    <div class="qr-contenido">
+                        <button class="cerrar-qr" onclick="cerrarNombre()">×</button>
+
+                        <h2>DATOS DEL PEDIDO</h2>
+
+                        <p>Ingresa tu nombre para continuar con el pago.</p>
+
+                        <input
+                            type="text"
+                            id="nombre-cliente"
+                            placeholder="Escribe tu nombre"
+                            autocomplete="name"
+                            maxlength="100">
+
+                        <button
+                            class="verificar-pago-btn"
+                            onclick="continuarConPago()">
+                            CONTINUAR
+                        </button>
+                    </div>
+                </div>
                 <!-- VENTANA DE PAGO -->
                 <div id="ventana-qr" class="ventana-qr">
                     <div class="qr-contenido">
