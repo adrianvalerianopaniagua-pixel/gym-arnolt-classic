@@ -218,7 +218,7 @@ function finalizarCompra() {
 
     const total = calcularTotal();
 
-    fetch("http://localhost:3000/guardar-pedido", {
+    fetch("/guardar-pedido", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -303,7 +303,7 @@ function verificarPago() {
     estado.textContent = "⌛ Registrando pago...";
 
     fetch(
-        "http://localhost:3000/pagar-pedido/" +
+        "/pagar-pedido/" +
         window.idPedidoActual,
         {
             method: "PUT"
